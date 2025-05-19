@@ -6,7 +6,7 @@ body {
   font-family: "Segoe UI", sans-serif;
   overflow-x: hidden;
   margin: 0;
-  background: #374151;
+  background: #121b24;
   color: #fff;
 }
 
@@ -15,7 +15,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #2d3542;
+  background: #0a0e13;
   opacity: 0;
   animation: menu 1s ease forwards;
   animation-delay: 2s;
@@ -34,7 +34,7 @@ body {
   border: none;
   cursor: pointer;
   z-index: 110;
-  margin-right: 18px;
+  margin-right: 12px;
 }
 .header .hamburguer span {
   display: block;
@@ -63,7 +63,7 @@ body {
   transition: color 0.3s;
 }
 .header .menu ul li a:hover {
-  color: #046e94;
+  color: #40525f;
 }
 
 .hero {
@@ -100,7 +100,7 @@ body {
 }
 
 .quem-somos {
-  background-color: #333c4b;
+  background-color: #0f161d;
   padding: 4rem 2rem;
   text-align: center;
 }
@@ -111,7 +111,7 @@ body {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 .quem-somos .card {
-  background-color: #414d60;
+  background-color: #1b2835;
   color: #aaaaaa;
   max-width: 800px;
   margin: 0 auto;
@@ -124,12 +124,12 @@ body {
   line-height: 1.7;
 }
 .quem-somos .card p strong {
-  color: #046e94;
+  color: #fff;
 }
 
 .sobre {
   padding: 2rem;
-  background: #313a48;
+  background: #0d131a;
 }
 .sobre .membros {
   display: flex;
@@ -138,7 +138,7 @@ body {
   justify-content: center;
 }
 .sobre .membros .membro {
-  background: #414d60;
+  background: #1b2835;
   padding: 1rem;
   border-radius: 10px;
   width: 250px;
@@ -158,8 +158,13 @@ body {
 .sobre .membros .membro .links img {
   width: 30px;
 }
+.sobre .membros .membro .links img:hover {
+  transform: translateY(-4px);
+  filter: drop-shadow(0px 0px 5px #fff);
+  transition: 0.4s;
+}
 .sobre .membros .membro .links a {
-  color: #046e94;
+  color: #40525f;
   text-decoration: none;
 }
 
@@ -179,7 +184,7 @@ body {
   justify-content: center;
 }
 .projetos .lista-projetos .projeto {
-  background: #485569;
+  background: #202f3f;
   border-radius: 10px;
   padding: 1rem;
   width: 250px;
@@ -205,7 +210,7 @@ body {
 .projetos .lista-projetos .projeto h3 {
   font-size: 1.2rem;
   margin: 0.5rem 0;
-  color: #046e94;
+  color: #40525f;
 }
 .projetos .lista-projetos .projeto p {
   font-size: 0.95rem;
@@ -214,7 +219,7 @@ body {
   text-align: center;
 }
 .projetos .lista-projetos .projeto .botao {
-  background: #046e94;
+  background: #40525f;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -223,13 +228,13 @@ body {
   transition: background 0.3s;
 }
 .projetos .lista-projetos .projeto .botao:hover {
-  background: #034962;
+  background: #2b3841;
 }
 .projetos .botao-vermais {
   margin-top: 2rem;
   display: inline-block;
   padding: 0.6rem 1.2rem;
-  background: #046e94;
+  background: #40525f;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -237,7 +242,7 @@ body {
   transition: background 0.3s;
 }
 .projetos .botao-vermais:hover {
-  background: #034962;
+  background: #2b3841;
 }
 
 .tecnologias {
@@ -256,7 +261,7 @@ body {
   justify-content: center;
 }
 .tecnologias .lista-tecnologias .tecnologia {
-  background: #485569;
+  background: #202f3f;
   border-radius: 10px;
   padding: 1rem;
   width: 220px;
@@ -282,7 +287,7 @@ body {
 .tecnologias .lista-tecnologias .tecnologia h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  color: #046e94;
+  color: #40525f;
 }
 .tecnologias .lista-tecnologias .tecnologia p {
   font-size: 0.9rem;
@@ -292,7 +297,7 @@ body {
 .contato {
   padding: 4rem 2rem;
   text-align: center;
-  background: #333c4b;
+  background: #0f161d;
 }
 .contato h2 {
   font-size: 2.2rem;
@@ -310,7 +315,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: #046e94;
+  background: #40525f;
   color: #fff;
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
@@ -324,13 +329,13 @@ body {
   height: 24px;
 }
 .contato .botoes-contato .botao-contato:hover {
-  background: #034962;
+  background: #2b3841;
 }
 
 .footer {
   text-align: center;
   padding: 1rem;
-  background: #222933;
+  background: #010202;
   font-size: 0.9rem;
   color: #aaaaaa;
 }
@@ -373,7 +378,7 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #272e39;
+    background: #040709;
     overflow: hidden;
     max-height: 0;
     padding: 0;

@@ -1,5 +1,5 @@
-$primario: #374151;
-$destaques: #046e94;
+$primario: #121b24;
+$destaques: #40525f;
 $texto: #fff;
 $cinza: #aaaaaa;
 
@@ -40,7 +40,7 @@ body {
         border: none;
         cursor: pointer;
         z-index: 110;
-        margin-right: 18px;
+        margin-right: 12px;
 
         span {
             display: block;
@@ -130,7 +130,6 @@ body {
         margin-bottom: 2rem;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     }
-
     .card {
         background-color: lighten($primario, 5%);
         color: $cinza;
@@ -145,7 +144,7 @@ body {
             line-height: 1.7;
 
             strong {
-                color: $destaques;
+                color: $texto;
             }
         }
     }
@@ -182,6 +181,11 @@ body {
 
                 img {
                     width: 30px;
+                    &:hover{
+                        transform: translateY(-4px);
+                        filter: drop-shadow(0px 0px 5px $texto);
+                        transition: .4s;
+                    }
                 }
 
                 a {
