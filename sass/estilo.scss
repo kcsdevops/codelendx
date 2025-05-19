@@ -130,6 +130,7 @@ body {
         margin-bottom: 2rem;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     }
+
     .card {
         background-color: lighten($primario, 5%);
         color: $cinza;
@@ -173,6 +174,10 @@ body {
                 margin-bottom: 1rem;
             }
 
+            .altura {
+                height: 55px;
+            }
+
             .links {
                 display: flex;
                 align-items: center;
@@ -181,7 +186,8 @@ body {
 
                 img {
                     width: 30px;
-                    &:hover{
+
+                    &:hover {
                         transform: translateY(-4px);
                         filter: drop-shadow(0px 0px 5px $texto);
                         transition: .4s;
@@ -328,7 +334,7 @@ body {
             h3 {
                 font-size: 1.1rem;
                 margin-bottom: 0.5rem;
-                color: $destaques;
+                color: $texto;
             }
 
             p {
@@ -374,6 +380,70 @@ body {
                 width: 24px;
                 height: 24px;
             }
+
+            &:hover {
+                background: darken($destaques, 10%);
+            }
+        }
+    }
+}
+
+.formulario-contato {
+    padding: 4rem 2rem;
+    background: darken($primario, 3%);
+    text-align: center;
+
+    h2 {
+        font-size: 2.2rem;
+        color: $texto;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+
+            input,
+            textarea {
+                padding: 0.8rem 1rem;
+                border-radius: 8px;
+                border: none;
+                font-size: 1rem;
+                background: lighten($primario, 5%);
+                color: $texto;
+
+                &::placeholder {
+                    color: $cinza;
+                }
+
+                &:focus {
+                    outline: 2px solid $destaques;
+                }
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 120px;
+            }
+        }
+
+        .botao-enviar {
+            background: $destaques;
+            color: $texto;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
 
             &:hover {
                 background: darken($destaques, 10%);
@@ -454,7 +524,8 @@ body {
             }
         }
     }
-    .botoes-contato{
+
+    .botoes-contato {
         flex-direction: column;
         align-items: center;
     }

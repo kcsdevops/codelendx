@@ -149,6 +149,9 @@ body {
   border-radius: 50%;
   margin-bottom: 1rem;
 }
+.sobre .membros .membro .altura {
+  height: 55px;
+}
 .sobre .membros .membro .links {
   display: flex;
   align-items: center;
@@ -287,7 +290,7 @@ body {
 .tecnologias .lista-tecnologias .tecnologia h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  color: #40525f;
+  color: #fff;
 }
 .tecnologias .lista-tecnologias .tecnologia p {
   font-size: 0.9rem;
@@ -329,6 +332,66 @@ body {
   height: 24px;
 }
 .contato .botoes-contato .botao-contato:hover {
+  background: #2b3841;
+}
+
+.formulario-contato {
+  padding: 4rem 2rem;
+  background: #0d131a;
+  text-align: center;
+}
+.formulario-contato h2 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+.formulario-contato form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.formulario-contato form .campo {
+  display: flex;
+  flex-direction: column;
+}
+.formulario-contato form .campo input,
+.formulario-contato form .campo textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  background: #1b2835;
+  color: #fff;
+}
+.formulario-contato form .campo input::-moz-placeholder, .formulario-contato form .campo textarea::-moz-placeholder {
+  color: #aaaaaa;
+}
+.formulario-contato form .campo input::placeholder,
+.formulario-contato form .campo textarea::placeholder {
+  color: #aaaaaa;
+}
+.formulario-contato form .campo input:focus,
+.formulario-contato form .campo textarea:focus {
+  outline: 2px solid #40525f;
+}
+.formulario-contato form .campo textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.formulario-contato form .botao-enviar {
+  background: #40525f;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.formulario-contato form .botao-enviar:hover {
   background: #2b3841;
 }
 
