@@ -34,7 +34,7 @@ body {
   border: none;
   cursor: pointer;
   z-index: 110;
-  margin-right: 30px;
+  margin-right: 18px;
 }
 .header .hamburguer span {
   display: block;
