@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeLend</title>
-    <link rel="shortcut icon" href="img/icone.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/iconeOF.ico" type="image/x-icon">
     <link rel="stylesheet" href="sass/estilo.css">
 </head>
 
@@ -102,6 +102,24 @@
                             <img src="img/linkedin.png" alt="linkedin">
                         </a>
                         <a href="https://github.com/TheoKrdozo" target="_blank">
+                            <img src="img/github.png" alt="github">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="membro" data-animar="e">
+                    <img src="img/michel.jpg" alt="Foto Jan">
+                    <h3>Michell Platteni </h3>
+                    <div class="altura">
+                        <p>Frontend Developer.
+                        </p>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.linkedin.com/in/michell-platteni-2a832a289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank">
+                            <img src="img/linkedin.png" alt="linkedin">
+                        </a>
+                        <a href="https://github.com/Mplatteni38" target="_blank">
                             <img src="img/github.png" alt="github">
                         </a>
                     </div>
@@ -209,7 +227,8 @@
             <h2 data-animar="c">Entre em contato com um de nossos profissionais</h2>
             <div class="botoes-contato">
                 <div class="btn-wp" data-animar="b" style="transition-delay: 0.2s;">
-                    <a href="https://chat.whatsapp.com/LS4XrmVtL6r75mNwS7mAHk" target="_blank" class="botao-contato">
+                    <a href="https://api.whatsapp.com/send?phone=5511981830976&text=Ol%C3%A1%20Manuela%2C%20voc%C3%AAs%20podem%20criar%20o%20meu%20site%3F"
+                        target="_blank" class="botao-contato">
                         <img src="img/whats.png" alt="WhatsApp" width="25px"> WhatsApp
                     </a>
                 </div>
@@ -224,7 +243,16 @@
 
         <section class="formulario-contato" id="formulario">
             <h2>Envie sua mensagem</h2>
+
+            <div id="mensagem-sucesso" style="display: none; color: #00ffcc; font-weight: bold; margin-bottom: 15px;">
+                Obrigado! Nossa equipe entrará em contato em breve.
+            </div>
+
             <form id="contato-form">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_next" value="">
+
                 <div class="campo">
                     <input type="text" name="nome" placeholder="Seu nome" required />
                 </div>
@@ -235,7 +263,7 @@
                     <input type="tel" name="telefone" placeholder="Seu telefone" required />
                 </div>
                 <div class="campo">
-                    <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+                    <textarea name="mensagem" placeholder="Sua mensagem"></textarea>
                 </div>
                 <button type="submit" class="botao-enviar">
                     Enviar
@@ -244,7 +272,6 @@
             </form>
         </section>
 
-
     </main>
 
     <footer id="contato" class="footer">
@@ -252,6 +279,29 @@
     </footer>
 
     <script src="script/script.js"></script>
+    <script>
+        document.getElementById('contato-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const dados = new FormData(form);
+
+            fetch("https://formsubmit.co/codelend2025@gmail.com", {
+                method: "POST",
+                body: dados
+            }).then(response => {
+                if (response.ok) {
+                    form.reset();
+                    document.getElementById('mensagem-sucesso').style.display = 'block';
+                } else {
+                    alert("Ocorreu um erro. Tente novamente mais tarde.");
+                }
+            }).catch(error => {
+                alert("Erro na conexão. Verifique sua internet.");
+            });
+        });
+    </script>
+
 </body>
 
 </html>
