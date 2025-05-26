@@ -62,3 +62,34 @@ botaoVerMais.addEventListener('click', (e) => {
     }, 1500);
 });
 
+//CARROSSEL
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const btnPrev = document.querySelector('.carousel-btn.prev');
+    const btnNext = document.querySelector('.carousel-btn.next');
+    let currentIndex = 0;
+
+    const moveToSlide = (index) => {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${slideWidth * index}px)`;
+        currentIndex = index;
+    };
+
+    btnPrev.addEventListener('click', () => {
+        const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+        moveToSlide(newIndex);
+    });
+
+    btnNext.addEventListener('click', () => {
+        const newIndex = (currentIndex + 1) % slides.length;
+        moveToSlide(newIndex);
+    });
+
+    moveToSlide(0);
+
+    window.addEventListener('resize', () => {
+        moveToSlide(currentIndex);
+    });
+});
+

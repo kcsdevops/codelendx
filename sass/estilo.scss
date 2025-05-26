@@ -290,6 +290,86 @@ body {
     }
 }
 
+.diversificados {
+    padding: 60px 20px;
+    background-color: $primario;
+    text-align: center;
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: $texto;
+    }
+
+    .carousel {
+        position: relative;
+        max-width: 35vw;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            video,
+            img {
+                width: 100%;
+                max-height: fit-content;
+                object-fit: cover;
+                display: block;
+                border-radius: 8px;
+            }
+
+            .slide-title {
+                margin-top: 10px;
+                font-size: 1.25rem;
+                color: $texto;
+                font-weight: 600;
+            }
+        }
+
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            z-index: 10;
+
+            &.prev {
+                left: 10px;
+            }
+
+            &.next {
+                right: 10px;
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+}
+
 .tecnologias {
     padding: 4rem 2rem;
     text-align: center;
