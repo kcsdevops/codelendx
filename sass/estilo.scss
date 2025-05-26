@@ -340,12 +340,16 @@ body {
                 font-weight: 600;
             }
         }
+    }
 
+    .botao_carousel {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 2.5em;
+        margin-top: 40px;
 
         .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
             background-color: rgba(0, 0, 0, 0.5);
             border: none;
             color: #fff;
@@ -609,6 +613,7 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
 }
 
 //ANIMAÇOES

@@ -296,10 +296,14 @@ body {
   color: #fff;
   font-weight: 600;
 }
-.diversificados .carousel .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.diversificados .botao_carousel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 2.5em;
+  margin-top: 40px;
+}
+.diversificados .botao_carousel .carousel-btn {
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
   color: #fff;
@@ -309,13 +313,13 @@ body {
   font-size: 1.5rem;
   z-index: 10;
 }
-.diversificados .carousel .carousel-btn.prev {
+.diversificados .botao_carousel .carousel-btn.prev {
   left: 10px;
 }
-.diversificados .carousel .carousel-btn.next {
+.diversificados .botao_carousel .carousel-btn.next {
   right: 10px;
 }
-.diversificados .carousel .carousel-btn:hover {
+.diversificados .botao_carousel .carousel-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
